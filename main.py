@@ -3,13 +3,13 @@ import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 
 app = FastAPI(
-    title="Proyecto Individual N° 1 - Alumna Soledad Rozzatti ",
+    title="Proyecto Individual N° 1 ",
     description= "Machine Learning Operations (MLOps)"
 
 )
 
 
-df = pd.read_csv('movies_dataset_limpio.csv')
+df = pd.read_csv('dataset_ETL.csv')
 df['release_date'] = pd.to_datetime(df['release_date'], format='%Y-%m-%d')
 df['month_release'] = df['release_date'].dt.strftime('%B')
 df['day_of_week_release'] = df['release_date'].dt.strftime('%A')

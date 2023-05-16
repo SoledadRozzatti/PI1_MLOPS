@@ -106,9 +106,22 @@ def retorno(pelicula: str):
     return {'pelicula':pelicula, 'inversion':inversion, 'ganacia':ganancia,'retorno':retorno, 'anio':anio}
 
 
-    
-df_m = pd.read_csv('movies_dataset_modelo.csv', sep=',')
+
+
+df_m = pd.read_csv('data_modelo.csv', sep=',')
 df_m = df_m.sample(n=20000, random_state=42)
-df_filtered = df_m[['title', 'vote_average']]
+punt_matrix = df_m.pivot_table(index='title', values='puntaje_promedio')
+simil_matrix = cosine_similarity(punt_matrix.fillna(0))
 
+@app.get('/recomendacion/{titulo}')
+def recomendacion(titulo: str):
+ 
+    movie_index = punt_matrix.index.get_loc(titulo)
 
+    movie_scores = list(enumerate(simil_matrix[movie_index]))
+
+    movie_scores = sorted(movie_scores, key=lambda x: x[1], reverse=True)
+
+    top_movies = [punt_matrix.index[i] for i, score in movie_scores[1:6]]
+
+    return top_movies

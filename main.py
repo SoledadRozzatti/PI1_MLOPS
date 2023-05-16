@@ -107,7 +107,7 @@ def retorno(pelicula: str):
 
 
 df_m = pd.read_csv('movies_dataset_modelo.csv', sep= ',')
-df_m = df_m.sample(n=20000, random_state=42)
+df_m = df_m.sample(n=10000, random_state=42)
 puntaje_matrix = df_m.pivot_table(index='title', columns='genero_principal', values='vote_average')
 similitud_matrix = cosine_similarity(puntaje_matrix.fillna(0))
 

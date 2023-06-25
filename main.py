@@ -23,7 +23,7 @@ def index():
 @app.get("/peliculas_mes/{mes}")
 def peliculas_mes(mes: str):
     '''
-    Esta función reciba como argumento el mes en español y la función retorna la cantidad de películas que se estrenaron ese mes
+    Esta función recibe como argumento el mes en español y la función retorna la cantidad de películas que se estrenaron ese mes
     (nombre del mes en español, en str, ejemplo "marzo") históricamente.
 
     '''

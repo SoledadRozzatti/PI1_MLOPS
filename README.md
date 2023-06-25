@@ -61,7 +61,7 @@
 
 <br>
 
-### Además te dejo algunas de imágenes de distintas consultas realizadas. 
+### Además te dejo algunas imágenes de distintas consultas realizadas. 
 
 <br>
 

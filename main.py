@@ -1,3 +1,4 @@
+# Importamos las librerías necesarias. 
 from fastapi import FastAPI
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
@@ -8,7 +9,7 @@ app = FastAPI(
 
 )
 
-
+# Importamos el dataset que contiene los datos para ser consumidos en las consultas de la API.
 df = pd.read_csv("Datasets\\dataset_ETL.csv")
 df["release_date"] = pd.to_datetime(df["release_date"], format="%Y-%m-%d")
 df["month_release"] = df["release_date"].dt.strftime("%B")
@@ -123,7 +124,7 @@ def retorno(pelicula: str):
 
 
 
-
+# Importamos el dataset que contiene los datos que serán consumidos en las consultas de la API.
 df_m = pd.read_csv("Datasets\data_modelo.csv", sep=",")
 df_m = df_m.sample(n=4000, random_state=42)
 punt_matrix = df_m.pivot_table(index="title", values="vote_average")

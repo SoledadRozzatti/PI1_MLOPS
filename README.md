@@ -115,8 +115,19 @@
 
  + [Diccionario de datos](https://docs.google.com/spreadsheets/d/1QkHH5er-74Bpk122tJxy_0D49pJMIwKLurByOfmxzho/edit#gid=0): Diccionario con algunas descripciones de las columnas disponibles en el dataset.
 
- <br>
+<br>
 
- ### **Material de apoyo**
- En este mismo repositorio podras encontrar algunos [links de ayuda](hhttps://github.com/HX-PRomero/PI_ML_OPS/raw/main/Material%20de%20apoyo.md).
+### Quedo atenta a tu feedback!
+### Desde ya, muchas gracias por tu tiempo!
+
+### Y no puedo irme sin agradecer inmensamente a mi precioso esposo (quien me sostuvo y alentó incontables veces en este proceso), a mis queridos y que orgullosamente puedo decir "compañeros de la Cohorte 10 de Data Science Full Time" me han brindado su gran apoyo y generosidad, y a Soy Henry por el espacio, la capacitación brindada y el ámbito de hermandad que nos han llevado a poder lograr! 
+
+<br>
+
+## Gracias Infinitas!
+
+<br>
+
+# _María Soledad Rozzatti_
+
 
